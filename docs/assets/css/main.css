@@ -1,0 +1,89 @@
+/* Links */
+a{
+  /* color: #f2f2f2; */
+  text-decoration: none;
+}
+a:focus,
+a:hover {
+  /* color: #f2f2f2; */
+  text-decoration: none;
+}
+
+
+/*
+ * Base
+ */
+
+ @font-face {
+  font-family: Bilbo Swash Caps;
+  src: url('../font/BilboSwashCaps-Regular.ttf');
+}
+
+@font-face {
+  font-family: Parisienne;
+  src: url('../font/Parisienne-Regular.ttf');
+}
+
+.site-font {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.font-BilboSwashCamps {
+  font-family: 'Bilbo Swash Caps', cursive;
+}
+
+.font-Parisienne {
+  font-family: 'Parisienne', cursive;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.row {
+  margin: 15px 0;
+}
+
+.search-form {
+  margin: 50px 0 0 0;
+  padding: 0 50px;
+  text-align: justify;
+}
+
+.search-row {
+  margin-bottom: 30px;
+}
+
+.search-block {
+  display: block;
+  /* margin: 20px 0 0 0; */
+}
+
+.title-block {
+  display: block;
+  margin: 30px;
+  padding: 10px;
+}
+
+.site-title {
+  margin: 0;
+  padding: 0;
+}
+
+.site-subtitle {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-style: italic;
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.8em;
+}
+
+.directory-table {
+  text-align: center;
+}
