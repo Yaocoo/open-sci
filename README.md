@@ -1,9 +1,5 @@
-# Yaocoo's homepage
+# Open-SCI
 
-## My homepage
-- [https://yaocoo.github.io/homepage/](https://yaocoo.github.io/homepage/)
+## Open-SCI
+- [https://yaocoo.github.io/open-sci/](https://yaocoo.github.io/open-sci/)
 
-## Github bookmark
-
-- Mendeley: [https://github.com/Mendeley](https://github.com/Mendeley)
-- Data visualization: [https://github.com/topics/data-visualization](https://github.com/topics/data-visualization)
