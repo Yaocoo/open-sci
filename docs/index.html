@@ -53,28 +53,28 @@
                             <form class="search-form" id="article-search" action="search.html" target="_blannk">
                                 <input type="hidden" name="obj" value="article">
                                 <div class="row search-row">
-                                    <div class="col-xl-10">
+                                    <div class="col-sm-10">
                                         <input type="text" class="form-control" name="srchContent" placeholder="search string. e.g. brain connectivity">
                                     </div>
-                                    <div class="col">
+                                    <div class="col-sm-2">
                                         <button type="submit" class="btn btn-info">Search</button>
                                     </div>
                                 </div>
 
                                 <div class="row">
-                                    <div class="col form-check">
+                                    <div class="col-sm-4 form-check">
                                         <label class="form-check-label">
                                             <input class="form-check-input" type="radio" name="srchType" value="google_scholar" checked>
                                             Google Scholar
                                         </label>
                                     </div>
-                                    <div class="col form-check">
+                                    <div class="col-sm-4 form-check">
                                         <label class="form-check-label">
                                             <input class="form-check-input" type="radio" name="srchType" value="semantic_scholar">
                                             Semantic Scholar
                                         </label>
                                     </div>
-                                    <div class="col form-check">
+                                    <div class="col-sm-4 form-check">
                                         <label class="form-check-label">
                                             <input class="form-check-input" type="radio" name="srchType" value="research_gate">
                                             Research Gate
@@ -83,41 +83,35 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col form-check">
+                                    <div class="col-sm-4 form-check">
                                         <label class="form-check-label">
                                             <input class="form-check-input" type="radio" name="srchType" value="pubmed">
                                             Pubmed
                                         </label>
                                     </div>
-                                    <div class="col form-check">
+                                    <div class="col-sm-4 form-check">
                                         <label class="form-check-label">
                                             <input class="form-check-input" type="radio" name="srchType" value="sage_journals">
                                             SAGE Journals
-                                        </label>
-                                    </div>
-                                    <div class="col form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="radio" name="srchType" value="" disabled>
-                                            blank
                                         </label>
                                     </div>
 
                                 </div>
 
                                 <div class="row">
-                                    <div class="col form-check">
+                                    <div class="col-sm-4 form-check">
                                         <label class="form-check-label">
                                                 <input class="form-check-input" type="radio" name="srchType" value="nature">
                                                 Nature
                                             </label>
                                     </div>
-                                    <div class="col form-check">
+                                    <div class="col-sm-4 form-check">
                                         <label class="form-check-label">
                                                 <input class="form-check-input" type="radio" name="srchType" value="science">
                                                 Science
                                             </label>
                                     </div>
-                                    <div class="col form-check">
+                                    <div class="col-sm-4 form-check">
                                         <label class="form-check-label">
                                                 <input class="form-check-input" type="radio" name="srchType" value="cell">
                                                 Cell
@@ -132,28 +126,28 @@
                             <form class="search-form" id="author-search" action="search.html" target="_blannk">
                                 <input type="hidden" name="obj" value="author">
                                 <div class="row search-row">
-                                    <div class="col-xl-10">
+                                    <div class="col-sm-10">
                                         <input type="text" class="form-control" name="srchContent" placeholder="name or research field. e.g. information theory">
                                     </div>
-                                    <div class="col">
+                                    <div class="col-sm-2">
                                         <button type="submit" class="btn btn-info">Search</button>
                                     </div>
                                 </div>
 
                                 <div class="row">
-                                    <div class="col form-check">
+                                    <div class="col-sm-4 form-check">
                                         <label class="form-check-label">
                                                     <input class="form-check-input" type="radio" name="srchType" value="google_scholar" checked>
                                                     Google scholar
                                                 </label>
                                     </div>
-                                    <div class="col form-check">
+                                    <div class="col-sm-4 form-check">
                                         <label class="form-check-label">
                                                     <input class="form-check-input" type="radio" name="srchType" value="subject_aera">
                                                     Subject area
                                                 </label>
                                     </div>
-                                    <div class="col form-check">
+                                    <div class="col-sm-4 form-check">
                                         <label class="form-check-label">
                                                     <input class="form-check-input" type="radio" name="srchType" value="research_gate">
                                                     Research Gate
@@ -170,9 +164,9 @@
                             <form class="search-form" target="_blank" method="POST" action="http://sci-hub.hk/">
                                 <input type="hidden" id="sci-hub-plugin-check" name="sci-hub-plugin-check" value="">
                                 <div class="row search-row">
-                                    <div class="col-xl-10">
-                                        <input type="text" class="form-control" name="request" placeholder="enter URL, PMID / DOI or search string" autocomplete="off" autofocus> </div>
-                                    <div class="col">
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="request" placeholder="enter URL, PMID / DOI or search string" autocomplete="off"> </div>
+                                    <div class="col-sm-2">
                                         <button type="submit" class="btn btn-info">Open</button>
                                     </div>
                                 </div>
@@ -181,30 +175,111 @@
                     </div>
                 </div>
 
+                <div class="search-foot align-content-end">
+                    <p class="site-subtitle">Appreciate your sharing and comments if you feel this page is helpful.</p>
+                    <p class="site-subtitle">Contact: yaocong.duan@gmail.com</p>
+                </div>
+
             </div>
             <!-- First screen end -->
 
             <!-- Content start -->
             <div class="content-container">
-                <table class="table directory-table">
-                    <!-- <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First Name</th>
-                            <th scope="col">Last Name</th>
-                            <th scope="col">Username</th>
-                        </tr>
-                    </thead> -->
-                    <tbody>
-                        <tr>
-                            <th scope="row" width="5%">Reference manager</th>
-                            <td>Mendeley</td>
-                            <td>Zotero</td>
-                            <td>Citavi</td>
-                            <td>Endnote</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="directory-block">
+                    <h5 class="text-info">
+                        Research
+                    </h5>
+                    <div class="card border-info mb-3">
+                        <ul class="row list-unstyled directory-row">
+                            <li class="col-sm-2">
+                                <a href="https://www.researchgate.net/">Research Gate</a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href=""></a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href=""></a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href=""></a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href=""></a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href=""></a>
+                            </li>
+                        </ul>
+                        <ul class="row list-unstyled directory-row">
+                            <li class="col-sm-2">
+                                <a href="">Blank</a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href=""></a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href=""></a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href=""></a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href=""></a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="directory-block">
+                    <h5 class="text-info">
+                        Reference tools
+                    </h5>
+                    <div class="card border-info mb-3">
+                        <ul class="row list-unstyled directory-row">
+                            <li class="col-sm-2">
+                                <a href="https://www.mendeley.com/">Mendeley</a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href="https://www.zotero.org/">Zotero</a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href="https://www.citavi.com/">Citavi</a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href="http://endnote.com/">Endnote</a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href=""></a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href=""></a>
+                            </li>
+                        </ul>
+                        <ul class="row list-unstyled directory-row">
+                            <li class="col-sm-2">
+                                <a href="https://creative.adobe.com/products/acrobat">Adobe PDF</a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href=""></a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href=""></a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href=""></a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href=""></a>
+                            </li>
+                            <li class="col-sm-2">
+                                <a href=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <!-- Content end -->
             <!-- Foot start -->
