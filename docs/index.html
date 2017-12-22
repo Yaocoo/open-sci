@@ -6,7 +6,8 @@
     <meta charset="utf-8">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
     <!-- Custom styles -->
     <link href="assets/css/base.css" rel="stylesheet">
     <link href="assets/css/component.css" rel="stylesheet">
@@ -17,169 +18,214 @@
 
 <body>
 
-    <div class="bg-wrapper container h100 w100">
+    <div class="container bg-wrapper h100 w100">
 
         <!-- Site start -->
-        <div class="site-wrapper container h100 w100">
+        <div class="container site-wrapper h100 w100">
 
             <!-- First screen start -->
-            <div class="first-screen h100">
-                <div class="title-block">
-                    <h1 class="site-title font-BilboSwashCamps">Open . SCI . Portal</h1>
-                    <p class="site-subtitle">Make the most of open resources in your research.</p>
-                </div>
+            <div class="first-screen w100 h100">
+                <table class="w100 h100">
+                    <tbody>
+                        <tr class="title-block">
+                            <td>
+                                <h1 class="site-title font-BilboSwashCamps">Open . SCI . Portal</h1>
+                                <p class="site-subtitle">Make the most of open resources in your research.</p>
+                            </td>
+                        </tr>
 
-                <div class="search-block">
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#article">Publiction</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#author">Researcher</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#journal">Journal</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#sci-hub">Sci-Hub</a>
-                        </li>
-                    </ul>
+                        <tr>
+                            <td class="search-block">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#article">Publiction</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#author">Researcher</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#general">General</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#sci-hub">Sci-Hub</a>
+                                    </li>
+                                </ul>
 
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div class="tab-pane active container" id="article">
-                            <!-- search form for Article -->
-                            <form class="search-form" id="article-search" action="search.html" target="_blannk">
-                                <input type="hidden" name="obj" value="article">
-                                <div class="row search-row">
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="srchContent" placeholder="search string. e.g. brain connectivity">
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane active container" id="article">
+                                        <!-- search form for Article -->
+                                        <form class="search-form" id="article-search" action="search.html" target="_blannk">
+                                            <input type="hidden" name="obj" value="article">
+                                            <div class="row search-row">
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="srchContent" placeholder="search string. e.g. brain connectivity">
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <button type="submit" class="btn btn-info">Search</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="google_scholar" checked> Google Scholar
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="semantic_scholar"> Semantic Scholar
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="research_gate"> Research Gate
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="pubmed"> Pubmed
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="sage_journals"> SAGE Journals
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="google_pdf"> Google PDF
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="nature"> Nature
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="science"> Science
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="cell"> Cell
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                        </form>
                                     </div>
-                                    <div class="col-sm-2">
-                                        <button type="submit" class="btn btn-info">Search</button>
+
+                                    <div class="tab-pane container" id="author">
+                                        <!-- search form for Author -->
+                                        <form class="search-form" id="author-search" action="search.html" target="_blannk">
+                                            <input type="hidden" name="obj" value="author">
+                                            <div class="row search-row">
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="srchContent" placeholder="name or research field. e.g. information theory">
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <button type="submit" class="btn btn-info">Search</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="google_scholar" checked> Google scholar
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="subject_aera"> Subject area
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="research_gate"> Research Gate
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                        </form>
                                     </div>
+
+                                    <div class="tab-pane container" id="general">
+                                        <!-- General search -->
+                                        <form class="search-form" id="general-search" action="search.html" target="_blannk">
+                                            <input type="hidden" name="obj" value="general">
+                                            <div class="row search-row">
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="srchContent" placeholder="enter search string.">
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <button type="submit" class="btn btn-info">Search</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="google" checked> Google
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="bing"> Bing
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="quora"> Quora
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="rg_question"> RG question
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+
+                                    <div class="tab-pane container" id="sci-hub">
+                                        <form class="search-form" target="_blank" method="POST" action="http://sci-hub.hk/">
+                                            <input type="hidden" id="sci-hub-plugin-check" name="sci-hub-plugin-check" value="">
+                                            <div class="row search-row">
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="request" placeholder="enter URL, PMID / DOI or search string" autocomplete="off"> </div>
+                                                <div class="col-sm-2">
+                                                    <button type="submit" class="btn btn-info">Open</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
                                 </div>
+                            </td>
+                        </tr>
 
-                                <div class="row">
-                                    <div class="col-sm-4 form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="radio" name="srchType" value="google_scholar" checked>
-                                            Google Scholar
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-4 form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="radio" name="srchType" value="semantic_scholar">
-                                            Semantic Scholar
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-4 form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="radio" name="srchType" value="research_gate">
-                                            Research Gate
-                                        </label>
-                                    </div>
-                                </div>
+                        <tr>
+                            <td class="search-foot align-bottom">
+                                <p class="site-subtitle">If you feel this page is helpful, appreciate your sharing and suggestions.</p>
+                                <p class="site-subtitle">Contact: yaocong.duan@gmail.com</p>
+                            </td>
+                        </tr>
 
-                                <div class="row">
-                                    <div class="col-sm-4 form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="radio" name="srchType" value="pubmed">
-                                            Pubmed
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-4 form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="radio" name="srchType" value="sage_journals">
-                                            SAGE Journals
-                                        </label>
-                                    </div>
-
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-sm-4 form-check">
-                                        <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="srchType" value="nature">
-                                                Nature
-                                            </label>
-                                    </div>
-                                    <div class="col-sm-4 form-check">
-                                        <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="srchType" value="science">
-                                                Science
-                                            </label>
-                                    </div>
-                                    <div class="col-sm-4 form-check">
-                                        <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="srchType" value="cell">
-                                                Cell
-                                            </label>
-                                    </div>
-                                </div>
-
-                            </form>
-                        </div>
-                        <div class="tab-pane container" id="author">
-                            <!-- search form for Author -->
-                            <form class="search-form" id="author-search" action="search.html" target="_blannk">
-                                <input type="hidden" name="obj" value="author">
-                                <div class="row search-row">
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="srchContent" placeholder="name or research field. e.g. information theory">
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <button type="submit" class="btn btn-info">Search</button>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-sm-4 form-check">
-                                        <label class="form-check-label">
-                                                    <input class="form-check-input" type="radio" name="srchType" value="google_scholar" checked>
-                                                    Google scholar
-                                                </label>
-                                    </div>
-                                    <div class="col-sm-4 form-check">
-                                        <label class="form-check-label">
-                                                    <input class="form-check-input" type="radio" name="srchType" value="subject_aera">
-                                                    Subject area
-                                                </label>
-                                    </div>
-                                    <div class="col-sm-4 form-check">
-                                        <label class="form-check-label">
-                                                    <input class="form-check-input" type="radio" name="srchType" value="research_gate">
-                                                    Research Gate
-                                                </label>
-                                    </div>
-                                </div>
-
-                            </form>
-                        </div>
-                        <div class="tab-pane container" id="journal">
-
-                        </div>
-                        <div class="tab-pane container" id="sci-hub">
-                            <form class="search-form" target="_blank" method="POST" action="http://sci-hub.hk/">
-                                <input type="hidden" id="sci-hub-plugin-check" name="sci-hub-plugin-check" value="">
-                                <div class="row search-row">
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="request" placeholder="enter URL, PMID / DOI or search string" autocomplete="off"> </div>
-                                    <div class="col-sm-2">
-                                        <button type="submit" class="btn btn-info">Open</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="search-foot align-content-end">
-                    <p class="site-subtitle">Appreciate your sharing and comments if you feel this page is helpful.</p>
-                    <p class="site-subtitle">Contact: yaocong.duan@gmail.com</p>
-                </div>
-
+                    </tbody>
+                </table>
             </div>
             <!-- First screen end -->
 
@@ -296,9 +342,12 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
 
 </body>
 

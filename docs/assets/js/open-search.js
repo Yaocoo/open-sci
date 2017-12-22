@@ -18,6 +18,13 @@ authorUrlPre = {
     researchGate: "https://www.researchgate.net/search.Search.html?type=researcher&query=",
 }
 
+generalUrlPre = {
+    google: "https://www.google.com/search?&q=",
+    bing: "https://www.bing.com/search?q=",
+    quora: "https://www.quora.com/search?q=",
+    rgQuestion: "https://www.researchgate.net/search.Search.html?type=question&query=",
+}
+
 if (obj == 'article') {
     switch (srchType) {
         case 'google_scholar':
@@ -40,6 +47,10 @@ if (obj == 'article') {
 
         case 'sage_journals':
             resultUrl = articleUrlPre.sage + srchContent;
+            break;
+
+        case 'google_pdf':
+            resultUrl = generalUrlPre.google + 'filetype:pdf ' + srchContent;
             break;
 
         case 'nature':
@@ -71,6 +82,27 @@ if (obj == 'article') {
             srchContent = srchContent.replace('+', ' ');
             resultUrl = authorUrlPre.researchGate + srchContent;
             break;
+    }
+} else if (obj = 'general') {
+    switch (srchType) {
+        case 'google':
+            resultUrl = generalUrlPre.google + srchContent;
+            break;
+
+        case 'bing':
+            resultUrl = generalUrlPre.bing + srchContent;
+            break;
+
+            case 'quora':
+            resultUrl = generalUrlPre.quora + srchContent;
+            break;
+
+            case 'rg_question':
+            srchContent = srchContent.replace('+', ' ');
+            resultUrl = generalUrlPre.rgQuestion + srchContent;
+            break;
+
+            
     }
 }
 
