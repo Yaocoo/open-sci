@@ -91,15 +91,38 @@ a:hover {
 }
 
 .directory-block {
-  margin: 30px 0;
+  margin: 10px 0;
 }
 
 .directory-row {
-  margin: 5px 0;
-  padding: 0 20px;
-  text-align: center;
+  margin-bottom: 20px;
 }
 
 .directory-row a {
   color: #000;
+}
+
+.directory-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* .directory-card :hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+} */
+
+.directory-list-card {
+  border: transparent;
+}
+
+.directory-list-row {
+  margin: 2px 0;
+  padding: 0;
+}
+
+.directory-list-row a {
+  color: #000;
+}
+
+.temp-card {
+  border-color: transparent;
 }

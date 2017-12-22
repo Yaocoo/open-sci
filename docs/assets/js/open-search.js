@@ -11,6 +11,8 @@ articleUrlPre = {
     nature: "https://www.nature.com/search?q=",
     science: "http://search.sciencemag.org/?q=",
     cell: "http://www.cell.com/action/doSearch?searchType=quick&occurrences=all&journalCode=&searchScope=fullSite&searchText=",
+    arXiv: "https://arxiv.org/find/all/1/all:+AND+value+AND+phase+locking/0/1/0/all/0/1",
+    bioXiv: "https://www.biorxiv.org/search/phase%252Blocking%252Bvalue",
 }
 
 authorUrlPre = {
