@@ -95,16 +95,16 @@ if (obj == 'article') {
             resultUrl = generalUrlPre.bing + srchContent;
             break;
 
-            case 'quora':
+        case 'quora':
             resultUrl = generalUrlPre.quora + srchContent;
             break;
 
-            case 'rg_question':
+        case 'rg_question':
             srchContent = srchContent.replace('+', ' ');
             resultUrl = generalUrlPre.rgQuestion + srchContent;
             break;
 
-            
+
     }
 }
 

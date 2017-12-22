@@ -1,29 +1,26 @@
-// Define variabls
-var userAgent = navigator.userAgent; // get userAgent string
-var isOpera = userAgent.indexOf("Opera") > -1; // jduge if Opera
-var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera; // judge if IE
-var isEdge = userAgent.indexOf("Edge") > -1; // judge if Edge
-var isFF = userAgent.indexOf("Firefox") > -1; // judge if Firefox
-var isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") == -1; // judge if Safari
-var isChrome = userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Safari") > -1; // judge if Chrome
-
-var topBtn = $("#topBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    if ($(window).scrollTop() >= 20) {
-        topBtn.css("display", "block");
-    } else {
-        topBtn.css("display", "none");
+//  functions
+function changeScihubHost(host) {
+    switch (host) {
+        case 'cn':
+            host_url = 'http://sci-hub.cn';
+            break;
+        case 'hk':
+            host_url = 'http://sci-hub.hk';
+            break;
+        case 'tw':
+            host_url = 'http://sci-hub.tw';
+            break;
+        case 'tv':
+            host_url = 'http://sci-hub.tv';
+            break;
+        case 'mn':
+            host_url = 'http://sci-hub.mn';
+            break;
+        case 'la':
+            host_url = 'http://sci-hub.la';
+            break;
     }
-}
 
-function topFunction() {
-    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
-    document.documentElement.scrollTop = 0; // For IE and Firefox
+    $("#scihub-form").attr("action", host_url);
 }
 

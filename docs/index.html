@@ -201,7 +201,7 @@
                                     </div>
 
                                     <div class="tab-pane container" id="sci-hub">
-                                        <form class="search-form" target="_blank" method="POST" action="http://sci-hub.hk/">
+                                        <form class="search-form" id="scihub-form" target="_blank" method="POST" action="http://sci-hub.hk">
                                             <input type="hidden" id="sci-hub-plugin-check" name="sci-hub-plugin-check" value="">
                                             <div class="row search-row">
                                                 <div class="col-sm-10">
@@ -210,7 +210,42 @@
                                                     <button type="submit" class="btn btn-info">Open</button>
                                                 </div>
                                             </div>
+                                            <div class="row">
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="changeHost" onclick="changeScihubHost('hk');" checked> .hk
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="changeHost" onclick="changeScihubHost('tv');"> .tv
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="changeHost" onclick="changeScihubHost('tw');"> .tw
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="changeHost" onclick="changeScihubHost('cn');"> .cn
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="changeHost" onclick="changeScihubHost('mn');"> .mn
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="changeHost" onclick="changeScihubHost('la');"> .la
+                                                    </label>
+                                                </div>
+                                            </div>
                                         </form>
+
                                     </div>
 
                                 </div>
@@ -231,144 +266,161 @@
 
             <!-- Content start -->
             <div class="content-container">
-                <!-- directory block start -->
-                <div class="directory-block">
-                    <!-- <h5 class="text-info">
-                        Sites
-                    </h5> -->
-                    <div class="card-deck directory-row">
-                        <div class="card directory-card">
-                            <a href="https://www.researchgate.net/">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <img class="mr-3" src="./assets/icons/ResearchGate.jpg">
-                                        <div class="media-body">
-                                            <h5 class="mt-0">Research Gate</h5>
+                <!-- directory card start -->
+                <table>
+                    <tbody>
+                        <tr>
+                            <div class="card-deck directory-row">
+                                <div class="card directory-card">
+                                    <a href="https://www.researchgate.net/">
+                                        <div class="card-body">
+                                            <div class="media">
+                                                <img class="mr-3" src="./assets/icons/ResearchGate.jpg">
+                                                <div class="media-body">
+                                                    <h5 class="mt-0">Research Gate</h5>
+                                                </div>
+                                            </div>
+                                            <small class="text-muted">ResearchGate is a social networking site for scientists and researchers.</small>
                                         </div>
-                                    </div>
-                                    <small class="text-muted">ResearchGate is a social networking site for scientists and researchers.</small>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="card directory-card">
-                            <a href="https://scholar.google.com/">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <img class="mr-3" src="./assets/icons/GoogleScholar.jpg">
-                                        <div class="media-body">
-                                            <h5 class="mt-0">Google Scholar</h5>
+                                <div class="card directory-card">
+                                    <a href="https://scholar.google.com/">
+                                        <div class="card-body">
+                                            <div class="media">
+                                                <img class="mr-3" src="./assets/icons/GoogleScholar.jpg">
+                                                <div class="media-body">
+                                                    <h5 class="mt-0">Google Scholar</h5>
+                                                </div>
+                                            </div>
+                                            <small class="text-muted">Google Scholar is a freely accessible web search engine of scholarly literature.</small>
                                         </div>
-                                    </div>
-                                    <small class="text-muted">Google Scholar is a freely accessible web search engine of scholarly literature.</small>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="card directory-card">
-                            <a href="https://www.semanticscholar.org/">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <img class="mr-3" src="./assets/icons/SemanticScholar.jpg">
-                                        <div class="media-body">
-                                            <h5 class="mt-0">Semantic Scholar</h5>
+                                <div class="card directory-card">
+                                    <a href="https://www.semanticscholar.org/">
+                                        <div class="card-body">
+                                            <div class="media">
+                                                <img class="mr-3" src="./assets/icons/SemanticScholar.jpg">
+                                                <div class="media-body">
+                                                    <h5 class="mt-0">Semantic Scholar</h5>
+                                                </div>
+                                            </div>
+                                            <small class="text-muted">Semantic Scholar is a "smart" search service for journal articles.</small>
                                         </div>
-                                    </div>
-                                    <small class="text-muted">Semantic Scholar is a "smart" search service for journal articles.</small>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card-deck directory-row">
-                        <div class="card directory-card">
-                            <a href="https://www.coursera.org/">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <img class="mr-3" src="./assets/icons/Coursera.jpg">
-                                        <div class="media-body">
-                                            <h5 class="mt-0">Coursera</h5>
-                                        </div>
-                                    </div>
-                                    <small class="text-muted">Coursera offers online courses in a variety of subjects.</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="card temp-card">
-                            <!-- <a href=""> -->
-                            <div class="card-body">
-                                <div class="media">
-                                    <!-- <img class="mr-3" src="./assets/icons/Coursera.jpg"> -->
-                                    <div class="media-body">
-                                        <h5 class="mt-0"></h5>
-                                    </div>
-                                </div>
-                                <small class="text-muted"></small>
                             </div>
-                            <!-- </a> -->
-                        </div>
-                        <div class="card temp-card">
-                            <!-- <a href=""> -->
-                            <div class="card-body">
-                                <div class="media">
-                                    <!-- <img class="mr-3" src="./assets/icons/Coursera.jpg"> -->
-                                    <div class="media-body">
-                                        <h5 class="mt-0"></h5>
-                                    </div>
+                        </tr>
+                        <tr>
+                            <div class="card-deck directory-row">
+                                <div class="card directory-card">
+                                    <a href="https://www.coursera.org/">
+                                        <div class="card-body">
+                                            <div class="media">
+                                                <img class="mr-3" src="./assets/icons/Coursera.jpg">
+                                                <div class="media-body">
+                                                    <h5 class="mt-0">Coursera</h5>
+                                                </div>
+                                            </div>
+                                            <small class="text-muted">Coursera offers online courses in a variety of subjects.</small>
+                                        </div>
+                                    </a>
                                 </div>
-                                <small class="text-muted"></small>
+                                <div class="card temp-card">
+                                    <!-- <a href=""> -->
+                                    <div class="card-body">
+                                        <div class="media">
+                                            <!-- <img class="mr-3" src="./assets/icons/Coursera.jpg"> -->
+                                            <div class="media-body">
+                                                <h5 class="mt-0"></h5>
+                                            </div>
+                                        </div>
+                                        <small class="text-muted"></small>
+                                    </div>
+                                    <!-- </a> -->
+                                </div>
+                                <div class="card temp-card">
+                                    <!-- <a href=""> -->
+                                    <div class="card-body">
+                                        <div class="media">
+                                            <!-- <img class="mr-3" src="./assets/icons/Coursera.jpg"> -->
+                                            <div class="media-body">
+                                                <h5 class="mt-0"></h5>
+                                            </div>
+                                        </div>
+                                        <small class="text-muted"></small>
+                                    </div>
+                                    <!-- </a> -->
+                                </div>
                             </div>
-                            <!-- </a> -->
-                        </div>
-                    </div>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- directory card end -->
 
-                    <!-- <h5 class="text-info">
-                        Reference tools
-                    </h5>
-                    <div class="card border-info mb-3 directory-list-card">
-                        <ul class="row list-unstyled directory-list-row">
-                            <li class="col-sm-2">
+                <!-- directory list start -->
+                <table class="table directory-table">
+                    <tbody>
+                        <tr>
+                            <td>
                                 <a href="https://www.mendeley.com/">Mendeley</a>
-                            </li>
-                            <li class="col-sm-2">
+                            </td>
+                            <td>
                                 <a href="https://www.zotero.org/">Zotero</a>
-                            </li>
-                            <li class="col-sm-2">
+                            </td>
+                            <td>
                                 <a href="https://www.citavi.com/">Citavi</a>
-                            </li>
-                            <li class="col-sm-2">
+                            </td>
+                            <td>
                                 <a href="http://endnote.com/">Endnote</a>
-                            </li>
-                            <li class="col-sm-2">
-                                <a href=""></a>
-                            </li>
-                            <li class="col-sm-2">
-                                <a href=""></a>
-                            </li>
-                        </ul>
-                        <ul class="row list-unstyled directory-list-row">
-                            <li class="col-sm-2">
+                            </td>
+                            <td>
                                 <a href="https://creative.adobe.com/products/acrobat">Adobe PDF</a>
-                            </li>
-                            <li class="col-sm-2">
-                                <a href=""></a>
-                            </li>
-                            <li class="col-sm-2">
-                                <a href=""></a>
-                            </li>
-                            <li class="col-sm-2">
-                                <a href=""></a>
-                            </li>
-                            <li class="col-sm-2">
-                                <a href=""></a>
-                            </li>
-                            <li class="col-sm-2">
-                                <a href=""></a>
-                            </li>
-                        </ul>
-                    </div> -->
-
-                </div>
-                <!-- directory block end -->
+                            </td>
+                            <td>
+                                <a href="https://uk.mathworks.com/academia.html?s_tid=gn_acad">MATLAB</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://www.pexels.com/">Pexels</a>
+                            </td>
+                            <td>
+                                <a href="http://office.mmais.com.cn/Template/Home.shtml">OfficePlus</a>
+                            </td>
+                            <td>
+                                <a href="https://creative.adobe.com/products/download/photoshop">Photoshop</a>
+                            </td>
+                            <td>
+                                <a href="https://creative.adobe.com/products/download/illustrator">Illustrator</a>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://www.noisli.com/">Noisli</a>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- directory list end -->
             </div>
             <!-- Content end -->
+
             <!-- Foot start -->
             <div class="mastfoot">
                 <p>Maintained by
@@ -376,6 +428,7 @@
                 </p>
             </div>
             <!-- Foot end -->
+
         </div>
         <!-- Site end -->
 
@@ -389,7 +442,7 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
         crossorigin="anonymous"></script>
-
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

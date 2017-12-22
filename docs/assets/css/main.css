@@ -91,7 +91,7 @@ a:hover {
 }
 
 .directory-block {
-  margin: 10px 0;
+  /* margin: 10px 0; */
 }
 
 .directory-row {
@@ -125,4 +125,12 @@ a:hover {
 
 .temp-card {
   border-color: transparent;
+}
+
+.directory-table {
+  margin: 40px 0 0 0;
+}
+
+.directory-table a {
+  color: #000;
 }
