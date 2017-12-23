@@ -25,6 +25,7 @@ authorUrlPre = {
 generalUrlPre = {
     google: "https://www.google.com/search?&q=",
     bing: "https://www.bing.com/search?q=",
+    wiki: "https://en.wikipedia.org/wiki/Special:Search?search=",
     quora: "https://www.quora.com/search?q=",
     rgQuestion: "https://www.researchgate.net/search.Search.html?type=question&query=",
 }
@@ -96,6 +97,10 @@ if (obj == 'article') {
 
         case 'bing':
             resultUrl = generalUrlPre.bing + srchContent;
+            break;
+
+        case 'wiki':
+            resultUrl = generalUrlPre.wiki + srchContent;
             break;
 
         case 'quora':
