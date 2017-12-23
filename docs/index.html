@@ -39,7 +39,7 @@
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs">
                                     <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="tab" href="#article">Publiction</a>
+                                        <a class="nav-link active" data-toggle="tab" href="#article">Publication</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" data-toggle="tab" href="#author">Researcher</a>
@@ -89,11 +89,6 @@
                                                 <div class="col-sm-4 form-check">
                                                     <label class="form-check-label">
                                                         <input class="form-check-input" type="radio" name="srchType" value="pubmed"> Pubmed
-                                                    </label>
-                                                </div>
-                                                <div class="col-sm-4 form-check">
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="radio" name="srchType" value="sage_journals"> SAGE Journals
                                                     </label>
                                                 </div>
                                                 <div class="col-sm-4 form-check">
@@ -151,6 +146,14 @@
                                                 <div class="col-sm-4 form-check">
                                                     <label class="form-check-label">
                                                         <input class="form-check-input" type="radio" name="srchType" value="research_gate"> Research Gate
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="orcid"> ORCID
                                                     </label>
                                                 </div>
                                             </div>
@@ -254,7 +257,7 @@
 
                         <tr>
                             <td class="search-foot align-bottom">
-                                <p class="site-subtitle">If you feel this page is helpful, appreciate your sharing and suggestions.</p>
+                                <p class="site-subtitle">If you feel this page is helpful, we appreciate your suggestions and sharing.</p>
                                 <p class="site-subtitle">Contact: yaocong.duan@gmail.com</p>
                             </td>
                         </tr>
@@ -267,93 +270,97 @@
             <!-- Content start -->
             <div class="content-container">
                 <!-- directory card start -->
-                <table>
+                <table class="directory-table">
                     <tbody>
                         <tr>
-                            <div class="card-deck directory-row">
-                                <div class="card directory-card">
-                                    <a href="https://www.researchgate.net/">
-                                        <div class="card-body">
-                                            <div class="media">
-                                                <img class="mr-3" src="./assets/icons/ResearchGate.jpg">
-                                                <div class="media-body">
-                                                    <h5 class="mt-0">Research Gate</h5>
+                            <td>
+                                <div class="card-deck directory-row">
+                                    <div class="card directory-card">
+                                        <a href="https://www.researchgate.net/">
+                                            <div class="card-body">
+                                                <div class="media">
+                                                    <img class="mr-3" src="./assets/icons/ResearchGate.jpg">
+                                                    <div class="media-body">
+                                                        <h5 class="mt-0">Research Gate</h5>
+                                                    </div>
                                                 </div>
+                                                <small class="text-muted">ResearchGate is a social networking site for scientists and researchers.</small>
                                             </div>
-                                            <small class="text-muted">ResearchGate is a social networking site for scientists and researchers.</small>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="card directory-card">
-                                    <a href="https://scholar.google.com/">
-                                        <div class="card-body">
-                                            <div class="media">
-                                                <img class="mr-3" src="./assets/icons/GoogleScholar.jpg">
-                                                <div class="media-body">
-                                                    <h5 class="mt-0">Google Scholar</h5>
+                                        </a>
+                                    </div>
+                                    <div class="card directory-card">
+                                        <a href="https://scholar.google.com/">
+                                            <div class="card-body">
+                                                <div class="media">
+                                                    <img class="mr-3" src="./assets/icons/GoogleScholar.jpg">
+                                                    <div class="media-body">
+                                                        <h5 class="mt-0">Google Scholar</h5>
+                                                    </div>
                                                 </div>
+                                                <small class="text-muted">Google Scholar is a freely accessible web search engine of scholarly literature.</small>
                                             </div>
-                                            <small class="text-muted">Google Scholar is a freely accessible web search engine of scholarly literature.</small>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="card directory-card">
-                                    <a href="https://www.semanticscholar.org/">
-                                        <div class="card-body">
-                                            <div class="media">
-                                                <img class="mr-3" src="./assets/icons/SemanticScholar.jpg">
-                                                <div class="media-body">
-                                                    <h5 class="mt-0">Semantic Scholar</h5>
+                                        </a>
+                                    </div>
+                                    <div class="card directory-card">
+                                        <a href="https://www.semanticscholar.org/">
+                                            <div class="card-body">
+                                                <div class="media">
+                                                    <img class="mr-3" src="./assets/icons/SemanticScholar.jpg">
+                                                    <div class="media-body">
+                                                        <h5 class="mt-0">Semantic Scholar</h5>
+                                                    </div>
                                                 </div>
+                                                <small class="text-muted">Semantic Scholar is a "smart" search service for journal articles.</small>
                                             </div>
-                                            <small class="text-muted">Semantic Scholar is a "smart" search service for journal articles.</small>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
+                            </td>
                         </tr>
                         <tr>
-                            <div class="card-deck directory-row">
-                                <div class="card directory-card">
-                                    <a href="https://www.coursera.org/">
+                            <td>
+                                <div class="card-deck directory-row">
+                                    <div class="card directory-card">
+                                        <a href="https://www.coursera.org/">
+                                            <div class="card-body">
+                                                <div class="media">
+                                                    <img class="mr-3" src="./assets/icons/Coursera.jpg">
+                                                    <div class="media-body">
+                                                        <h5 class="mt-0">Coursera</h5>
+                                                    </div>
+                                                </div>
+                                                <small class="text-muted">Coursera offers online courses in a variety of subjects.</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card temp-card">
+                                        <!-- <a href=""> -->
                                         <div class="card-body">
                                             <div class="media">
-                                                <img class="mr-3" src="./assets/icons/Coursera.jpg">
+                                                <!-- <img class="mr-3" src="./assets/icons/Coursera.jpg"> -->
                                                 <div class="media-body">
-                                                    <h5 class="mt-0">Coursera</h5>
+                                                    <h5 class="mt-0"></h5>
                                                 </div>
                                             </div>
-                                            <small class="text-muted">Coursera offers online courses in a variety of subjects.</small>
+                                            <small class="text-muted"></small>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="card temp-card">
-                                    <!-- <a href=""> -->
-                                    <div class="card-body">
-                                        <div class="media">
-                                            <!-- <img class="mr-3" src="./assets/icons/Coursera.jpg"> -->
-                                            <div class="media-body">
-                                                <h5 class="mt-0"></h5>
-                                            </div>
-                                        </div>
-                                        <small class="text-muted"></small>
+                                        <!-- </a> -->
                                     </div>
-                                    <!-- </a> -->
-                                </div>
-                                <div class="card temp-card">
-                                    <!-- <a href=""> -->
-                                    <div class="card-body">
-                                        <div class="media">
-                                            <!-- <img class="mr-3" src="./assets/icons/Coursera.jpg"> -->
-                                            <div class="media-body">
-                                                <h5 class="mt-0"></h5>
+                                    <div class="card temp-card">
+                                        <!-- <a href=""> -->
+                                        <div class="card-body">
+                                            <div class="media">
+                                                <!-- <img class="mr-3" src="./assets/icons/Coursera.jpg"> -->
+                                                <div class="media-body">
+                                                    <h5 class="mt-0"></h5>
+                                                </div>
                                             </div>
+                                            <small class="text-muted"></small>
                                         </div>
-                                        <small class="text-muted"></small>
+                                        <!-- </a> -->
                                     </div>
-                                    <!-- </a> -->
                                 </div>
-                            </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -405,8 +412,27 @@
                                 <a href="https://www.noisli.com/">Noisli</a>
                             </td>
                             <td>
+                                <a href="https://hola.org/">Hola</a>
                             </td>
                             <td>
+                                <a href="https://getlantern.org/en_US/">Lantern</a>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="http://www.geenmedical.com/">GeenMedical</a>
+                            </td>
+                            <td>
+                                <a href="https://webofknowledge.com/">Web of Science</a>
+                            </td>
+                            <td>
+                                <a href="https://www.scopus.com/">Scopus</a>
                             </td>
                             <td>
                             </td>

@@ -18,6 +18,8 @@ articleUrlPre = {
 authorUrlPre = {
     googleScho: "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=",
     researchGate: "https://www.researchgate.net/search.Search.html?type=researcher&query=",
+    orcid: "https://orcid.org/orcid-search/quick-search/?searchQuery=",
+
 }
 
 generalUrlPre = {
@@ -45,10 +47,6 @@ if (obj == 'article') {
 
         case 'pubmed':
             resultUrl = articleUrlPre.pubmed + srchContent;
-            break;
-
-        case 'sage_journals':
-            resultUrl = articleUrlPre.sage + srchContent;
             break;
 
         case 'google_pdf':
@@ -83,6 +81,11 @@ if (obj == 'article') {
         case 'research_gate':
             srchContent = srchContent.replace('+', ' ');
             resultUrl = authorUrlPre.researchGate + srchContent;
+            break;
+
+        case 'orcid':
+            srchContent = srchContent.replace('+', ' ');
+            resultUrl = authorUrlPre.orcid + srchContent;
             break;
     }
 } else if (obj = 'general') {
