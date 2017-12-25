@@ -8,6 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
         crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Custom styles -->
     <link href="assets/css/base.css" rel="stylesheet">
     <link href="assets/css/component.css" rel="stylesheet">
@@ -60,7 +62,7 @@
                                             <input type="hidden" name="obj" value="article">
                                             <div class="row search-row">
                                                 <div class="col-sm-10">
-                                                    <input type="text" class="form-control" name="srchContent" placeholder="search string. e.g. brain connectivity">
+                                                    <input type="text" class="form-control" name="srchContent" placeholder="search string. e.g. brain network">
                                                 </div>
                                                 <div class="col-sm-2">
                                                     <button type="submit" class="btn btn-info">Search</button>
@@ -88,6 +90,24 @@
                                             <div class="row">
                                                 <div class="col-sm-4 form-check">
                                                     <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="arxiv"> arXiv
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="biorxiv"> bioRXiv
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="srchType" value="research_gate"> Research Gate
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-4 form-check">
+                                                    <label class="form-check-label">
                                                         <input class="form-check-input" type="radio" name="srchType" value="nature"> Nature
                                                     </label>
                                                 </div>
@@ -104,11 +124,6 @@
                                             </div>
 
                                             <div class="row">
-                                                <div class="col-sm-4 form-check">
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="radio" name="srchType" value="research_gate"> Research Gate
-                                                    </label>
-                                                </div>
                                                 <div class="col-sm-4 form-check">
                                                     <label class="form-check-label">
                                                         <input class="form-check-input" type="radio" name="srchType" value="google_pdf"> Google PDF
@@ -261,7 +276,8 @@
 
                         <tr>
                             <td class="search-foot align-bottom">
-                                <p class="site-subtitle">If you think this page is helpful, welcome to share with more friends. Appreciate any suggestions and sharing.</p>
+                                <p class="site-subtitle">If you think this page is helpful, welcome to share with more friends. Appreciate any suggestions
+                                    and sharing.</p>
                                 <p class="site-subtitle">Contact: yaocong.duan@gmail.com</p>
                             </td>
                         </tr>

@@ -11,16 +11,16 @@ articleUrlPre = {
     nature: "https://www.nature.com/search?q=",
     science: "http://search.sciencemag.org/?q=",
     cell: "http://www.cell.com/action/doSearch?searchType=quick&occurrences=all&journalCode=&searchScope=fullSite&searchText=",
-    arXiv: "https://arxiv.org/find/all/1/all:+AND+value+AND+phase+locking/0/1/0/all/0/1",
-    bioXiv: "https://www.biorxiv.org/search/phase%252Blocking%252Bvalue",
-}
+    arXiv: "https://arxiv.org/find/all/1/all:+AND+value+AND+phase+locking",
+    bioRXiv: "https://www.biorxiv.org/search/", //phase%252Blocking%252Bvalue",
+};
 
 authorUrlPre = {
     googleScho: "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=",
     researchGate: "https://www.researchgate.net/search.Search.html?type=researcher&query=",
     orcid: "https://orcid.org/orcid-search/quick-search/?searchQuery=",
 
-}
+};
 
 generalUrlPre = {
     google: "https://www.google.com/search?&q=",
@@ -28,7 +28,9 @@ generalUrlPre = {
     wiki: "https://en.wikipedia.org/wiki/Special:Search?search=",
     quora: "https://www.quora.com/search?q=",
     rgQuestion: "https://www.researchgate.net/search.Search.html?type=question&query=",
-}
+};
+
+httpMethod = 1; // 1 - get, 0 - POST
 
 if (obj == 'article') {
     switch (srchType) {
@@ -37,12 +39,12 @@ if (obj == 'article') {
             break;
 
         case 'semantic_scholar':
-            srchContent = srchContent.replace('+', ' ');
+            srchContent = srchContent.replace(/\+/g, ' ');
             resultUrl = articleUrlPre.semanticScho + srchContent;
             break;
 
         case 'research_gate':
-            srchContent = srchContent.replace('+', ' ');
+            srchContent = srchContent.replace(/\+/g, ' ');
             resultUrl = articleUrlPre.researchGate + srchContent;
             break;
 
@@ -59,12 +61,28 @@ if (obj == 'article') {
             break;
 
         case 'science':
-            srchContent = srchContent.replace('+', ' ');
+            srchContent = srchContent.replace(/\+/g, ' ');
             resultUrl = articleUrlPre.science + srchContent;
             break;
 
         case 'cell':
             resultUrl = articleUrlPre.cell + srchContent;
+            break;
+
+        case 'arxiv':
+            srchContent = srchContent.replace(/\+/g, ' ');
+            params = {
+                query: srchContent,
+                searchtype: 'all',
+            };
+            post('https://arxiv.org/search/', params);
+
+            httpMethod = 0;
+            break;
+
+        case 'biorxiv':
+            srchContent = srchContent.replace(/\+/g, '%252B');
+            resultUrl = articleUrlPre.bioRXiv + srchContent;
             break;
 
     }
@@ -75,17 +93,17 @@ if (obj == 'article') {
             break;
 
         case 'subject_aera':
-            srchContent = srchContent.replace('+', '_');
+            srchContent = srchContent.replace(/\+/g, '_');
             resultUrl = authorUrlPre.googleScho + 'label:' + srchContent;
             break;
 
         case 'research_gate':
-            srchContent = srchContent.replace('+', ' ');
+            srchContent = srchContent.replace(/\+/g, ' ');
             resultUrl = authorUrlPre.researchGate + srchContent;
             break;
 
         case 'orcid':
-            srchContent = srchContent.replace('+', ' ');
+            srchContent = srchContent.replace(/\+/g, ' ');
             resultUrl = authorUrlPre.orcid + srchContent;
             break;
     }
@@ -108,7 +126,7 @@ if (obj == 'article') {
             break;
 
         case 'rg_question':
-            srchContent = srchContent.replace('+', ' ');
+            srchContent = srchContent.replace(/\+/g, ' ');
             resultUrl = generalUrlPre.rgQuestion + srchContent;
             break;
 
@@ -116,5 +134,6 @@ if (obj == 'article') {
     }
 }
 
-
-window.location.href = resultUrl;
+if (httpMethod) {
+    window.location.href = resultUrl;
+}
