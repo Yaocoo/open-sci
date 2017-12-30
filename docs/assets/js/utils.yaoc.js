@@ -1,11 +1,12 @@
 function getQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-    var r = window.location.search.substr(1).match(reg);
+    var url = decodeURI(window.location.search);
+    var r = url.substr(1).match(reg);
     if (r != null) return unescape(r[2]);
     return null;
 }
 
-function post(URL, params) {  
+function post(URL, params) {
     var temp = document.createElement("form");  
     temp.action = URL;  
     temp.method = "post";  
